@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>3 Educations | Akshay Iyer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="My thesis on education in the age of AI - the education I received, education in a post-AGI world, and the ideal education.">
+  <link rel="icon" href="../favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.bundle.css">
+  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    .navbar-item:hover {
+      background-color: transparent !important;
+    }
+
+    .blog-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .blog-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-content p {
+      margin-bottom: 1.25rem;
+      line-height: 1.75;
+    }
+
+    .blog-content ol,
+    .blog-content ul {
+      margin-bottom: 1.25rem;
+      margin-left: 1.5rem;
+    }
+
+    .blog-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-content hr {
+      margin: 2rem 0;
+      background-color: #dbdbdb;
+    }
+
+    .back-link {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .blog-content {
+        font-size: 0.95rem;
+      }
+
+      .blog-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <strong>Akshay Iyer</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">Home</a>
+        <a class="navbar-item" href="index.html">Blogs</a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a href="https://github.com/akshay-022" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-github"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="mailto:akshaygiyer@gmail.com" class="icon is-large has-text-light">
+            <i class="fas fa-2x fa-envelope"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="https://www.linkedin.com/in/akshay-iyer2211/" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="https://x.com/AkshayIyer22" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-content">
+        <p class="back-link"><a href="index.html">&larr; Back to all posts</a></p>
+        <div id="content"></div>
+        <hr />
+        <p class="back-link"><a href="index.html">&larr; Back to all posts</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const markdown = `# My 3 Educations
+
+Dec 12, 2024
+
+I have been building in the AI for education space for several months now. I have spent many brain cycles thinking about education and AI.
+
+This is the first time I'm putting out my thesis into the world. I want to break down my thoughts into three parts:
+
+1. the education I received,
+2. the importance education will have in a post AGI world
+3. the ideal education I would have liked (and what I'm building AI for),
+
+---
+
+## **Part 1: The three educations I went through**
+
+I realise I have gone through 3 very different educations.
+
+I want to set some context first. I studied in the school ranked the best in India when I was in high school. The university that I went to is the toughest university to get into in India. Only the top 0.01% of test-givers of the IIT-JEE (1.3 million students give this each year) get into the program I was in.
+
+I also took supplementary classes for physics and math, of grades 2-3 years above my own, with a small group of smart kids in my city.
+
+My education was likely the best education anyone in India could hope for.
+
+### **Education 1: School and university (the traditional path)**
+
+School felt like an exercise in patience.
+
+Most subjects optimized for memorization rather than understanding or leverage. History meant learning dates, dynasties, and archaeological trivia. Geography meant memorizing river tributaries. English meant recalling exact metaphors from Shakespeare and reproducing them verbatim in exams. Even at the time, it was clear this information would never compound in the real world.
+
+I spent most of my time disengaged, waiting for breaks to socialize.
+
+When it came to physics and math—the few subjects that actually mattered—I already knew most of the material from my supplementary classes. Anything new I could understand quickly by reading the textbook, but I still had to sit through hour-long lectures paced for the median student. I usually read my own books during class instead.
+
+University was the same problem at a higher level.
+
+For courses I didn't care about, I memorized low-level technical details (MOSFET parameters, I–V curves) that I knew I would never use. For courses I *did* care about, like AI and ML, the structure was backward: hours spent on dense derivations before any intuition. I would leave class, watch a 10-minute video that explained the "why," and suddenly the math made sense. The system emphasized derivation; I needed intuition and implementation constraints.
+
+**Verdict:** the academic ROI was extremely low. Relative to my life goals, ~95% of classroom time was wasted.
+
+That said, school had one massive upside: it forced social development. I learned confidence, charisma, and how to deal with people. In college, I dated, made friends, and joined the music club. I learned how to operate socially—but almost none of that came from the curriculum itself.
+
+---
+
+### **Education 2: Supplementary STEM coaching**
+
+My second education came from IIT coaching classes—small, focused programs designed to train students for the IIT-JEE.
+
+This was the first time learning felt alive.
+
+Physics, in particular, was deeply engaging. I felt myself building a real model of how the universe worked, and I paid full attention. Math gave me tools to formalize that understanding and, more importantly, the confidence that I could reason rigorously. Chemistry was mostly useless long-term, but still intellectually interesting.
+
+I didn't have to study subjects I had zero interest in. The class was nine students. I sat in the front, asked questions constantly, and got something close to personalized instruction.
+
+The limitation was scope. This education covered a narrow slice of STEM. It taught me how the world works at a physical level, but not how to choose what problems to work on, how to create value, or how to shape outcomes in the real world.
+
+---
+
+### **Education 3: Self-directed learning through reading**
+
+The third education was entirely self-driven.
+
+I read only what I found interesting and what I believed would help me change the world. Through books, I learned about relationships, economics, AI, founders and their mistakes, critical thinking, cosmology, philosophy, and sales.
+
+This has been, by far, the highest-ROI education of my life. It compounded. It changed how I think. It has shaped who I am.
+
+The downside is structure. Some books were unnecessarily long, so much so that I did not read them or stopped in the middle. It made a lot of content inaccessible. Secondly most reading choices were driven by chance—Twitter threads, YouTube recommendations, or random suggestions—rather than a coherent curriculum.
+
+Which makes me think: a much better education is possible.
+
+**Again I want to emphasise**, the education I mentioned above is one that less than 0.1% of students in India receive. Even if all students in India received the 3 educations I mentioned above, the impact would fundamentally reshape India's trajectory. It would be one of the largest unhobblings of human capital the world has ever seen.
+
+## **Part 2: Does any of this matter in a post-AGI world?**
+
+Yes. Education matters immensely—and it does **not** have diminishing returns.
+
+### **1. Education compounds, even at the extreme tail**
+
+The people who dominate outcomes over decades are almost always obsessive learners. This includes the CEOs of almost every major company in the world
+
+Elon Musk has said that much of his worldview was built by reading voraciously when he was young. Edwin Chen, the solo founder who bootstrapped Surge AI to over $1B in revenue, was also a prolific reader early on. Charlie Munger and Warren Buffett have repeatedly attributed the majority of their success to lifelong learning and continuous reading. Naval Ravikant consistently emphasizes that reading and learning are the highest-leverage activities available to an individual.
+
+This pattern is not accidental. Formal education and elite credentials help early, but they plateau quickly. Continuous, self-directed learning does not. The average Stanford student—despite having world-class schooling and networks—will not come close, over a lifetime, to someone who compounds their understanding relentlessly for decades.
+
+Education is not about accumulating facts. It's about upgrading how you think, decide, and allocate attention. That advantage compounds indefinitely.
+
+### **2. AGI makes loss of human agency the default outcome**
+
+In a world of superintelligence, it becomes extremely easy to stop thinking.
+
+Most people will drift into passive AI consumption—watching AI slop videos all day, letting systems decide what to prioritize, and eventually what to do. The failure mode of AGI is not dramatic catastrophe; it is quiet surrender of agency.
+
+Education is likely the only real counterweight. Not education as content consumption, but education that builds judgment, curiosity, and internal goals. The ability to decide what matters and what doesn't becomes more valuable—not less—when intelligence is abundant and cheap.
+
+### **3. But will AI being smarter than us not make our smartness redundant?**
+
+Even if humans "merge" with AI, it will not be a native extension of our cognition. It will look more like asking ChatGPT questions faster and receiving answers faster. The hypothetical EEG helmet will decode our thoughts and stream answers back to us faster, but it will not be a native neuron-level extension at least for a very long time.
+
+Even IF AI gives us all the answers very quickly, the bottleneck remains human. You still need to know what to ask, what to ignore, and what to act on. It's the same analogy as why the calculator didn't make everyone as smart as Von Neumann or why google did not make everyone a super genius immediately. We need to know what to ask.
+
+Intelligence amplification will massively widen gaps. People with better mental models, clearer priorities, and stronger learning habits will pull further ahead in every competitive domain—business, science, politics, culture.
+
+AGI doesn't flatten outcomes. It magnifies them.
+
+So I think education is due for a big change, and it's worth working on.
+
+---
+
+## **Part 3: The ideal education I would have liked**
+
+What is the ideal education then? There are two core elements my education was missing.
+
+### **1. A breadth-first understanding of the world**
+
+I wanted exposure to a wide range of fields—and, more importantly, an understanding of their *boundaries*.
+
+Psychology, economics, policy, communication, leadership, physics, math, social systems. Not mastery, not memorization—just enough depth to understand what each field is about, what problems it can solve, and most importantly where its limits are.
+
+I was forced to memorize details that had no leverage. The exact equations governing electron flow in a MOSFET. Every example Shakespeare used in *The Merchant of Venice*. This level of detail was unnecessary and actively counterproductive.
+
+All I really needed was a map of what's possible—so I could decide what I actually wanted to work on. And then I dive deeper on a need to know basis. Depth should come *after* direction, not before.
+
+### **2. Real work, much earlier**
+
+I would have liked to start working on real projects much sooner—things I cared deeply about, poured energy into, and put out into the world.
+
+I visited Alphaschool (A new age school in SF that's getting all the buzz) and saw what this looks like in practice. One high school student built a TikTok musical that reached 30M views and now performs it live in NYC and Chicago. Another built an AI therapist embedded in soft toys. These projects teach far more than exams ever could. They hook students through creation, force real learning, and reveal what they're capable of.
+
+This kind of education builds agency. It shows students the joy of making something real—and the feedback loop of the real world. As I think about this, it's hard not to wonder what I could have built if I'd been given this environment earlier.
+
+---
+
+I am building an AI tutor that delivers this kind of interdisciplinary, agency-preserving education—the one I would have wanted for myself. AI today unlocks a degree of customization and flexibility at a scale which was never possible before.
+
+I've already launched and tested two products in stealth, both aimed at adults. What became clear very quickly is that most adults, especially busy ones, have deprioritized deep learning.
+
+So now I'm focused on middle and high school students—people whose full-time job is to learn, and who still have the time and flexibility to shape how they think.
+
+I've never been more convinced of anything. In an AI-dominated world, this kind of education is essential to preserving human agency. I'm building this and I'm looking for collaborators.
+
+If you read this and feel an unusually strong pull toward it, please reach out at akshaygiyer@gmail.com.`;
+
+    document.getElementById('content').innerHTML = marked.parse(markdown);
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('#navbarMenu');
+      if (burger && menu) {
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('is-active');
+          menu.classList.toggle('is-active');
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

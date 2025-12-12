@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Blog | Akshay Iyer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.bundle.css">
+  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <style>
+    .navbar-item:hover {
+      background-color: transparent !important;
+    }
+
+    .blog-list {
+      max-width: 600px;
+    }
+
+    .blog-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .blog-item:last-child {
+      border-bottom: none;
+    }
+
+    .blog-item a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .blog-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #3273dc;
+    }
+
+    .blog-item a:hover .blog-title {
+      text-decoration: underline;
+    }
+
+    .blog-date {
+      color: #7a7a7a;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <strong>Akshay Iyer</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">Home</a>
+        <a class="navbar-item" href="index.html">Blogs</a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a href="https://github.com/akshay-022" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-github"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="mailto:akshaygiyer@gmail.com" class="icon is-large has-text-light">
+            <i class="fas fa-2x fa-envelope"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="https://www.linkedin.com/in/akshay-iyer2211/" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="https://x.com/AkshayIyer22" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title is-1">Blogs</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-list">
+
+        <div class="blog-item">
+          <a href="3-educations.html">
+            <span class="blog-title">My 3 Educations</span>
+            <span class="blog-date">Dec 12, 2024</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('#navbarMenu');
+      if (burger && menu) {
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('is-active');
+          menu.classList.toggle('is-active');
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="css/main.bundle.css">
   <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
   <style>
+    .navbar-item:hover {
+      background-color: transparent !important;
+    }
+
     .video-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -15,6 +19,7 @@
     }
 
     @media (max-width: 768px) {
+
       /* Stack the videos vertically on smaller screens */
       .video-grid {
         grid-template-columns: 1fr;
@@ -31,11 +36,14 @@
     }
 
     .video-title {
-      font-size: 1.5rem; /* Make the text larger */
+      font-size: 1.5rem;
+      /* Make the text larger */
       margin: 10px 0;
       font-weight: bold;
-      min-height: 50px; /* Ensure the title takes up two lines */
-      line-height: 1.3; /* Adjust line spacing for better readability */
+      min-height: 50px;
+      /* Ensure the title takes up two lines */
+      line-height: 1.3;
+      /* Adjust line spacing for better readability */
     }
   </style>
 </head>
@@ -43,13 +51,20 @@
 <body>
   <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <div class="navbar-item is-hidden-desktop">
-        <a href="https://github.com/akshay-022" class="icon is-large has-text-light">
-          <i class="fab fa-2x fa-github"></i>
-        </a>
-      </div>
+      <a class="navbar-item" href="index.html">
+        <strong>Akshay Iyer</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-    <div class="navbar-menu">
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">Home</a>
+        <a class="navbar-item" href="blogs/index.html">Blogs</a>
+      </div>
       <div class="navbar-end">
         <div class="navbar-item">
           <a href="https://github.com/akshay-022" class="icon is-large has-text-light">
@@ -158,10 +173,12 @@
       <br>
       <p>
         <strong>Here are my AI research publications:</strong><br>
-        • AI research paper to mitigate training data biases. AAAI conference paper: <a href="https://arxiv.org/pdf/2401.15447.pdf" target="_blank">Read here</a><br>
-        • Akshay Iyer*, Kanad Pardeshi*, Nikunj Goyal*, Pranamya Kulkarni*, Abhilasha Sancheti et al., "A method to generate image descriptions with varying levels of detail", filed patent (USPTO), Adobe reference: P11617-US.
+        • AI research paper to mitigate training data biases. AAAI conference paper: <a
+          href="https://arxiv.org/pdf/2401.15447.pdf" target="_blank">Read here</a><br>
+        • Akshay Iyer*, Kanad Pardeshi*, Nikunj Goyal*, Pranamya Kulkarni*, Abhilasha Sancheti et al., "A method to
+        generate image descriptions with varying levels of detail", filed patent (USPTO), Adobe reference: P11617-US.
       </p>
-      
+
     </div>
   </section>
 
@@ -173,41 +190,50 @@
     <div class="container">
       <h1 class="title">Education & Experience</h1>
       <hr />
-  
+
       <!-- Columbia University Card -->
       <div class="card">
         <div class="card-content">
           <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img src="img/columbia-logo.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">Columbia University in the City of New York</p>
-            <p class="subtitle is-6">
-              MS CS | Aug 2023 - Dec 2024 | New York, United States <br />
-          </div>
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="img/columbia-logo.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Columbia University in the City of New York</p>
+              <p class="subtitle is-6">
+                MS CS | Aug 2023 - Dec 2024 | New York, United States <br />
+            </div>
           </div>
           <div class="content">
-              <span style="font-style: italic; color: #2c3e50;">GPA: 4.0825/4.0</span> <br />
-              <span style="font-style: italic; color: #2c3e50;">Relevant Coursework: Generative AI for Code, Cloud Computing, Engineering Software as a Service, Blockchain and Web3.0, Databases, Computation and the brain, Principles of Innovation, UI Design</span>
+            <span style="font-style: italic; color: #2c3e50;">GPA: 4.0825/4.0</span> <br />
+            <span style="font-style: italic; color: #2c3e50;">Relevant Coursework: Generative AI for Code, Cloud
+              Computing, Engineering Software as a Service, Blockchain and Web3.0, Databases, Computation and the brain,
+              Principles of Innovation, UI Design</span>
             </p>
-            Here's some stuff I did : 
+            Here's some stuff I did :
             <ul>
-              <li><strong>Zerocurve AI</strong>: Built a tool that helps people learn to use complicated-UI software like the Epic EHR software.</li>
+              <li><strong>Zerocurve AI</strong>: Built a tool that helps people learn to use complicated-UI software
+                like the Epic EHR software.</li>
               <li><strong>Inntwine</strong>: Built a networking and idea sharing platform for Columbia students.</li>
-              <li><strong>Software-as-a-Service Developer</strong>: Built a SaaS platform for food makers, using Ruby on Rails, following agile development.</li>
-              <li><strong>Blockchain Developer</strong>: Built an Ethereum-based FCFS freelancing platform with automatic job verification and payment.</li>
-              <li><strong>AWS Cloud Application</strong>: Built a microservice-based courseworks add-on with calendar integration for Columbia students.</li>
-              <li><strong>Brain Simulator</strong>: Developed a simulator to analyze transition dynamics of neuron assemblies in spiking networks.</li>
-              <li><strong>Teaching Assistant (COMS 4444)</strong>: Created game simulators, supported 30+ students trying to beat it in real time.</li>
-              <li><strong>Teaching Assistant (COMS 4460)</strong>: Guided 20+ students on how to best launch their tech venture.</li>
+              <li><strong>Software-as-a-Service Developer</strong>: Built a SaaS platform for food makers, using Ruby on
+                Rails, following agile development.</li>
+              <li><strong>Blockchain Developer</strong>: Built an Ethereum-based FCFS freelancing platform with
+                automatic job verification and payment.</li>
+              <li><strong>AWS Cloud Application</strong>: Built a microservice-based courseworks add-on with calendar
+                integration for Columbia students.</li>
+              <li><strong>Brain Simulator</strong>: Developed a simulator to analyze transition dynamics of neuron
+                assemblies in spiking networks.</li>
+              <li><strong>Teaching Assistant (COMS 4444)</strong>: Created game simulators, supported 30+ students
+                trying to beat it in real time.</li>
+              <li><strong>Teaching Assistant (COMS 4460)</strong>: Guided 20+ students on how to best launch their tech
+                venture.</li>
             </ul>
           </div>
         </div>
       </div>
-  
+
       <!-- IIT Bombay Card -->
       <div class="card card-gap">
         <div class="card-content">
@@ -219,106 +245,145 @@
             </div>
             <div class="media-content">
               <p class="title is-4">Indian Institute of Technology, Bombay</p>
-            <p class="subtitle is-6">
-              BTech. Electrical Engineering and Computer Science | Jul 2019 - Aug 2023 | Mumbai, India <br />
+              <p class="subtitle is-6">
+                BTech. Electrical Engineering and Computer Science | Jul 2019 - Aug 2023 | Mumbai, India <br />
             </div>
           </div>
           <div class="content">
-              <span style="font-style: italic; color: #2c3e50;">GPA: 9.21/10.0</span> <br />
-              <span style="font-style: italic; color: #2c3e50;">Relevant Coursework: Technology Venture Creation, Data Structures and Algorithms, Analysis of Algorithms, Programming for Data Science, Introduction to ML, Advanced ML, Intelligent Agents and RL, Deep Learning for NLP, Optimization in ML, Digital Image Processing</span>
+            <span style="font-style: italic; color: #2c3e50;">GPA: 9.21/10.0</span> <br />
+            <span style="font-style: italic; color: #2c3e50;">Relevant Coursework: Technology Venture Creation, Data
+              Structures and Algorithms, Analysis of Algorithms, Programming for Data Science, Introduction to ML,
+              Advanced ML, Intelligent Agents and RL, Deep Learning for NLP, Optimization in ML, Digital Image
+              Processing</span>
             </p>
-            Here's some stuff I did : 
+            Here's some stuff I did :
             <ul>
-              <li><strong>Data partnerships in Indian banks</strong>: Worked on a B2B to greatly simplify bank digital partnerships (customer data exchange with third parties).</li>
-              <li><strong>AI Researcher</strong>: Focused on counterfactual estimation for continuous treatment datasets. Published at AAAI-24.</li>
-              <li><strong>Neuromorphic Engineering Research</strong>: Developed speech recognition using Liquid State Machines (LSM) and explored non-backpropagation training rules to improve performance.</li>
-              <li><strong>GAN Perception</strong>: Trained GANs on different input image datasets and used CLIP to gauge their understanding of subjective concepts like 'beautiful'.</li>
-              <li><strong>Institute Student Mentor</strong>: Mentored 12 freshmen on academics and extracurriculars.</li>
-              <li><strong>Teaching Assistant (MA207)</strong>: Conducted tutorials on advanced differential equations for 40+ students.</li>
+              <li><strong>Data partnerships in Indian banks</strong>: Worked on a B2B to greatly simplify bank digital
+                partnerships (customer data exchange with third parties).</li>
+              <li><strong>AI Researcher</strong>: Focused on counterfactual estimation for continuous treatment
+                datasets. Published at AAAI-24.</li>
+              <li><strong>Neuromorphic Engineering Research</strong>: Developed speech recognition using Liquid State
+                Machines (LSM) and explored non-backpropagation training rules to improve performance.</li>
+              <li><strong>GAN Perception</strong>: Trained GANs on different input image datasets and used CLIP to gauge
+                their understanding of subjective concepts like 'beautiful'.</li>
+              <li><strong>Institute Student Mentor</strong>: Mentored 12 freshmen on academics and extracurriculars.
+              </li>
+              <li><strong>Teaching Assistant (MA207)</strong>: Conducted tutorials on advanced differential equations
+                for 40+ students.</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
-  
+
+
   <section class="section">
     <div class="container">
       <h1 class="title">Some things I've built</h1>
       <hr />
 
-      
+
 
       <div class="video-grid">
 
         <!-- Project 4 -->
         <div class="video-item">
           <div class="video-title">Corta - Your second brain</div>
-          <p>You lose your Notion notes in an unorganized abyss (organizing is tough). ChatGPT never retrieves all your relevant thoughts for a nuanced decision. Corta will build a second brain like you want, and use AI on it exhaustively.</p><br>
-          <iframe src="https://www.youtube.com/embed/w3MrznpNrIk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>You lose your Notion notes in an unorganized abyss (organizing is tough). ChatGPT never retrieves all your
+            relevant thoughts for a nuanced decision. Corta will build a second brain like you want, and use AI on it
+            exhaustively.</p><br>
+          <iframe src="https://www.youtube.com/embed/w3MrznpNrIk" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
 
         <!-- Project 4 -->
         <div class="video-item">
           <div class="video-title">The IDE for non technical users </div>
-          <p>Cursor is for technical people. Lovable and Bolt are for frontend and only very simple websites. Non technical people want to build more, and my tool enables just that.</p><br>
+          <p>Cursor is for technical people. Lovable and Bolt are for frontend and only very simple websites. Non
+            technical people want to build more, and my tool enables just that.</p><br>
           <br>
-          <iframe src="https://www.youtube.com/embed/Hr4BwXdTqa0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/Hr4BwXdTqa0" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
 
         <!-- Project 5 -->
         <div class="video-item">
           <div class="video-title">Karen.ai - Stress Test for Customer Support</div>
           <p>This is Karen.ai, a website to stress test your customer support employees by being a Karen.</p><br><br>
-          <iframe src="https://www.youtube.com/embed/S_L54SDrlCE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/S_L54SDrlCE" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
 
         <!-- New Project -->
         <div class="video-item">
-            <div class="video-title">Flomi AI - Enterprise Documentation Tool</div>
-            <p>A tool to make documenting the specific knowledge in enterprises much easier, things that usually go undocumented.</p><br><br>
-            <iframe src="https://www.youtube.com/embed/IdOH7Y02q_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video-title">Flomi AI - Enterprise Documentation Tool</div>
+          <p>A tool to make documenting the specific knowledge in enterprises much easier, things that usually go
+            undocumented.</p><br><br>
+          <iframe src="https://www.youtube.com/embed/IdOH7Y02q_c" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
 
         <!-- Project 8 -->
         <div class="video-item">
           <div class="video-title">AI agent marketplace</div>
-          <p>A way to instruct AI agents to do workflows using examples. People have specific knowledge, and examples seemed to be the best way to capture that.</p><br>
+          <p>A way to instruct AI agents to do workflows using examples. People have specific knowledge, and examples
+            seemed to be the best way to capture that.</p><br>
           <br>
           <br>
-          <iframe src="https://www.youtube.com/embed/zlwUY07Y12I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/zlwUY07Y12I" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
 
         <!-- Project 7 -->
         <div class="video-item">
           <div class="video-title">Mirror AI - Your AI Digital Persona</div>
-          <p>A platform to create your own digital persona. It's an AI that talks like you and that you can feed your information to in an authenticated way. Allow your friends to chat with it and embed it in your own website as an API. Built for the YC + Supabase hackathon (Got a special mention).</p><br>
-          <iframe src="https://www.youtube.com/embed/I-pgUZcOxyA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>A platform to create your own digital persona. It's an AI that talks like you and that you can feed your
+            information to in an authenticated way. Allow your friends to chat with it and embed it in your own website
+            as an API. Built for the YC + Supabase hackathon (Got a special mention).</p><br>
+          <iframe src="https://www.youtube.com/embed/I-pgUZcOxyA" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
         <!-- Project 1 -->
         <div class="video-item">
           <div class="video-title">Agent-based automation platform</div>
-          <p>Current automation platforms are almost like visual coding (blocks and flowcharts), which is too complex for the average HR/accounting person to learn and do quickly. I'm trying to build a much more intuitive automation platform for enterprises using Agentic AI and LLM Code generation.</p><br>
-          <iframe src="https://www.youtube.com/embed/6ZX46odwG8s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Current automation platforms are almost like visual coding (blocks and flowcharts), which is too complex
+            for the average HR/accounting person to learn and do quickly. I'm trying to build a much more intuitive
+            automation platform for enterprises using Agentic AI and LLM Code generation.</p><br>
+          <iframe src="https://www.youtube.com/embed/6ZX46odwG8s" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
-        
+
         <!-- Project 2 -->
         <div class="video-item">
           <div class="video-title">Unit testing for LLM prompts</div>
-          <p>Created a library that captures LLM input prompts you put in during development and uses an LLM to generate variations of these input-output pairs. This enables developers to evaluate the reliability of their system prompts in different ways. Entrepreneur first hackathon project.</p><br>
-          <iframe src="https://www.youtube.com/embed/2MJV9nCRq84" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Created a library that captures LLM input prompts you put in during development and uses an LLM to generate
+            variations of these input-output pairs. This enables developers to evaluate the reliability of their system
+            prompts in different ways. Entrepreneur first hackathon project.</p><br>
+          <iframe src="https://www.youtube.com/embed/2MJV9nCRq84" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
 
         <!-- Project 3 -->
         <div class="video-item">
           <div class="video-title">AI agents to automate accounts</div>
-          <p>I used AI agents to automate tedious accounting tasks like invoice data entry and ledger scrutiny. Used Langchain and LangGraph. Human in the loop for important actions.</p><br><br><br>
-          <iframe src="https://www.youtube.com/embed/VOXkwYbLJjY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>I used AI agents to automate tedious accounting tasks like invoice data entry and ledger scrutiny. Used
+            Langchain and LangGraph. Human in the loop for important actions.</p><br><br><br>
+          <iframe src="https://www.youtube.com/embed/VOXkwYbLJjY" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
       </div>
     </div>
-</section>
+  </section>
 
 
 
@@ -329,31 +394,37 @@
     <div class="container">
       <h1 class="title">Big Tech Experience</h1>
       <hr />
-  
+
       <!-- Adobe Internship -->
       <div class="card">
         <div class="card-content">
           <div class="media">
             <div class="media-left">
               <figure class="image is-48x48">
-                <img src="img/adobe-logo.png" alt="Adobe" onerror="this.onerror=null; this.innerHTML='Adobe'; this.style.background='#FF0000'; this.style.color='#FFFFFF'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center';">
+                <img src="img/adobe-logo.png" alt="Adobe"
+                  onerror="this.onerror=null; this.innerHTML='Adobe'; this.style.background='#FF0000'; this.style.color='#FFFFFF'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center';">
               </figure>
             </div>
             <div class="media-content">
               <p class="title is-4">Adobe</p>
-              <p class="subtitle is-6">Machine Learning Researcher - <time datetime="2022-05">May 2022</time> - <time datetime="2022-07">Jul 2022</time></p>
+              <p class="subtitle is-6">Machine Learning Researcher - <time datetime="2022-05">May 2022</time> - <time
+                  datetime="2022-07">Jul 2022</time></p>
             </div>
           </div>
           <div class="content">
-            <p>As a Machine Learning Researcher at Adobe, I was responsible for extensive literature survey in multimodal media and developing a controllable image description generation system.</p>
+            <p>As a Machine Learning Researcher at Adobe, I was responsible for extensive literature survey in
+              multimodal media and developing a controllable image description generation system.</p>
             <ul>
               <li>Analyzed over 30 research papers in multimodal media to formulate a research problem.</li>
-              <li>Utilized dense captioning through Faster R-CNNs and BERT transformers for controllable image captioning.</li>
-              <li>Developed and submitted a patent for the first controllable captioning algorithm using a continuous value as input.</li>
+              <li>Utilized dense captioning through Faster R-CNNs and BERT transformers for controllable image
+                captioning.</li>
+              <li>Developed and submitted a patent for the first controllable captioning algorithm using a continuous
+                value as input.</li>
               <li>Presented slide decks and demonstrated the solution to senior executives at Adobe.</li>
               <li>Created a website to deploy ML models and provided real-time demos.</li>
             </ul>
-            <p><strong>Resulting Publication:</strong> Akshay Iyer et al., "A method to generate image descriptions with varying levels of detail", Adobe Reference: P11617-US</p>
+            <p><strong>Resulting Publication:</strong> Akshay Iyer et al., "A method to generate image descriptions with
+              varying levels of detail", Adobe Reference: P11617-US</p>
             <div class="tags">
               <span class="tag">Python</span>
               <span class="tag">Natural Language Processing (NLP)</span>
@@ -364,7 +435,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Samsung Semiconductor Internship -->
       <div class="card card-gap">
         <div class="card-content">
@@ -376,14 +447,17 @@
             </div>
             <div class="media-content">
               <p class="title is-4">Samsung Semiconductor</p>
-              <p class="subtitle is-6">Digital Hardware Intern - <time datetime="2021-05">May 2021</time> - <time datetime="2021-07">Jul 2021</time></p>
+              <p class="subtitle is-6">Digital Hardware Intern - <time datetime="2021-05">May 2021</time> - <time
+                  datetime="2021-07">Jul 2021</time></p>
             </div>
           </div>
           <div class="content">
-            <p>As a Digital Hardware Intern, I implemented data integrity checks for the NVMe interface in Solid State Drives (SSDs).</p>
+            <p>As a Digital Hardware Intern, I implemented data integrity checks for the NVMe interface in Solid State
+              Drives (SSDs).</p>
             <ul>
               <li>Analyzed the NVMe interface, NVMe IPs, DDR memory, and the axi4 interface.</li>
-              <li>Verified the 8-bit protection information appended to stored data to ensure data integrity in SSDs.</li>
+              <li>Verified the 8-bit protection information appended to stored data to ensure data integrity in SSDs.
+              </li>
             </ul>
             <div class="tags">
               <span class="tag">VHDL</span>
@@ -392,7 +466,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Cogno AI Internship -->
       <div class="card card-gap">
         <div class="card-content">
@@ -404,13 +478,15 @@
             </div>
             <div class="media-content">
               <p class="title is-4">Cogno AI</p>
-              <p class="subtitle is-6">Machine Learning Intern - <time datetime="2020-12">Dec 2020</time> - <time datetime="2021-01">Jan 2021</time></p>
+              <p class="subtitle is-6">Machine Learning Intern - <time datetime="2020-12">Dec 2020</time> - <time
+                  datetime="2021-01">Jan 2021</time></p>
             </div>
           </div>
           <div class="content">
             <p>At Cogno AI, I built a customer service chatbot using NLP and deep learning techniques.</p>
             <ul>
-              <li>Processed data using language translation tools and NLP techniques such as lemmatization and stemming.</li>
+              <li>Processed data using language translation tools and NLP techniques such as lemmatization and stemming.
+              </li>
               <li>Implemented a bi-directional LSTM neural network to classify queries into predefined sets.</li>
               <li>Achieved a classification accuracy of over 90% across a multilingual dataset.</li>
             </ul>
@@ -424,44 +500,57 @@
       </div>
     </div>
   </section>
-  
-  
+
+
   <section class="section">
     <div class="container">
-        <h1 class="title">I also do music!</h1>
-        <hr />
-        <p>Here's <a href="https://www.youtube.com/channel/UCBtAloBfMtS7UtL6ojg1SoA" target="_blank">my youtube channel</a>! <br>I post covers and original music there.</p>
-        <br>
-        <div class="video-grid">
-            <!-- Video 1 -->
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/JcvPhoXreRM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <!-- Video 2 -->
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/oe3PbtruDdc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <!-- Video 3 -->
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/TTteeePUzGQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <!-- Video 4 -->
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/06VUc2SZd1g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+      <h1 class="title">I also do music!</h1>
+      <hr />
+      <p>Here's <a href="https://www.youtube.com/channel/UCBtAloBfMtS7UtL6ojg1SoA" target="_blank">my youtube
+          channel</a>! <br>I post covers and original music there.</p>
+      <br>
+      <div class="video-grid">
+        <!-- Video 1 -->
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/JcvPhoXreRM" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
-        <br />
-        <div class="content">
-            <h2 class="subtitle">Spotify Profile</h2>
-            <p>Listen to my tracks and all the ones I'm featured in on <a href="https://open.spotify.com/artist/1um9BNVhuxtyU5YBTklLXj?go=1&sp_cid=9fbb36d3941046e168a8f26e1dce770d&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=ce239ed0e7af4193" target="_blank">Spotify</a>.</p>
-            <iframe src="https://open.spotify.com/embed/artist/1um9BNVhuxtyU5YBTklLXj?go=1&sp_cid=9fbb36d3941046e168a8f26e1dce770d&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=ce239ed0e7af4193" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+        <!-- Video 2 -->
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/oe3PbtruDdc" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
+
+        <!-- Video 3 -->
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/TTteeePUzGQ" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/06VUc2SZd1g" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <br />
+      <div class="content">
+        <h2 class="subtitle">Spotify Profile</h2>
+        <p>Listen to my tracks and all the ones I'm featured in on <a
+            href="https://open.spotify.com/artist/1um9BNVhuxtyU5YBTklLXj?go=1&sp_cid=9fbb36d3941046e168a8f26e1dce770d&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=ce239ed0e7af4193"
+            target="_blank">Spotify</a>.</p>
+        <iframe
+          src="https://open.spotify.com/embed/artist/1um9BNVhuxtyU5YBTklLXj?go=1&sp_cid=9fbb36d3941046e168a8f26e1dce770d&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=ce239ed0e7af4193"
+          width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
     </div>
   </section>
-  
+
 
   <section class="section">
     <div class="container">
@@ -761,6 +850,19 @@
 
 
   <script src="js/bundle.js"></script>
+  <script>
+    // Navbar burger toggle for mobile
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('#navbarMenu');
+      if (burger && menu) {
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('is-active');
+          menu.classList.toggle('is-active');
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
