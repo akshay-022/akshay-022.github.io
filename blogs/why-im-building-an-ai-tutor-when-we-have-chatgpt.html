@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Why I'm Building an AI Tutor When We Have ChatGPT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Why I'm Building an AI Tutor When We Have ChatGPT.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Why I'm Building an AI Tutor When We Have ChatGPT" />
+  <meta property="og:description" content="Why I'm Building an AI Tutor When We Have ChatGPT." />
+  <meta property="og:image" content="https://akshayiyer.me/preview.jpg" />
+  <meta property="og:url" content="https://akshayiyer.me/blogs/why-im-building-an-ai-tutor-when-we-have-chatgpt" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why I'm Building an AI Tutor When We Have ChatGPT" />
+  <meta name="twitter:description" content="Why I'm Building an AI Tutor When We Have ChatGPT." />
+  <meta name="twitter:image" content="https://akshayiyer.me/preview.jpg" />
+  <link rel="icon" href="../favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.bundle.css">
+  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    .navbar-item:hover {
+      background-color: transparent !important;
+    }
+
+    .blog-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .blog-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-content p {
+      margin-bottom: 1.25rem;
+      line-height: 1.75;
+    }
+
+    .blog-content ol,
+    .blog-content ul {
+      margin-bottom: 1.25rem;
+      margin-left: 1.5rem;
+    }
+
+    .blog-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-content hr {
+      margin: 2rem 0;
+      background-color: #dbdbdb;
+    }
+
+    .back-link {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .blog-content {
+        font-size: 0.95rem;
+      }
+
+      .blog-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <strong>Akshay Iyer</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">Home</a>
+        <a class="navbar-item" href="index.html">Blogs</a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a href="https://github.com/akshay-022" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-github"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="mailto:akshaygiyer@gmail.com" class="icon is-large has-text-light">
+            <i class="fas fa-2x fa-envelope"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="https://www.linkedin.com/in/akshay-iyer2211/" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="https://x.com/AkshayIyer22" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-content">
+        <p class="back-link"><a href="index.html">&larr; Back to all posts</a></p>
+        <div id="content"></div>
+        <p class="back-link"><a href="index.html">&larr; Back to all posts</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const markdown = `# Why I'm Building an AI Tutor When We Have ChatGPT
+
+Dec 12, 2024
+
+Hello! I'm Akshay and this is the first time I'm writing publicly.
+
+I'm a solo founder and I have been building in SF for close to a year now. I've worked on a dozen projects and learnt much about myself and the world. I think I have finally found a problem I want to be obsessed with for a considerable amount of time.
+
+I want to work on human education in an age of AI. And I think this is less trivial than one would think.
+
+I want to break down my thoughts into three parts:
+
+1. My 3 educations,
+2. The importance of education, before and after AGI,
+3. The ideal education I would have liked (and what I'm building AI for),
+
+---
+
+## **Part 1: The three educations I went through**
+
+I realise I have gone through 3 very different educations.
+
+I want to set some context first. I studied in the school ranked the best in India when I was in high school, and did my undergrad at IIT Bombay (The best tech university in India). Only 0.01% of the 1.3 million students who take the IIT-JEE each year get into the program I got to attend.
+
+I also took supplementary classes for physics and math, of grades 2-3 years above my own, with a small group of smart kids in my city.
+
+My education was likely the best education anyone in India could hope for.
+
+### **Education 1: School and university (the traditional path)**
+
+When I think back to all the time I effectively lost in school I can't help but be a little sad.
+
+Subjects like history, geography and literature were majorly memorization. I had to memorize the names of 25 rivers and their exact paths in India, and the metaphors Shakespeare made verbatim in all his characters' speeches. These were useless details.
+
+Parts of history, geography and literature are very important but not the ones my school emphasised.
+
+Math and Physics went awfully slow for me. I usually read my own books in class.
+
+University was the same - I had to memorize low-level technical details of a MOSFET, and the exact step by step derivation of the math in a variational autoencoder, both unnecessary.
+
+In my estimate, maybe ~90% of my classroom time was wasted. That's a *decade* that I could have spent compounding at the same rate as I am right now.
+
+There are two important things I want to point out here -
+
+1. This is a decade of minimal responsibilities. We get one, maybe 2 other such decades in our life if we're lucky. An additional decade is enough for someone high agency to create reusable rockets or build the foundations of AGI. And this is not just one extra decade of equivalent work, it's an extra decade of compounding.
+2. Most humans never reach their full potential. I'm convinced that anyone who learns optimally for a decade would be superhuman compared to today's standards.
+
+However this education had one huge upside - it made me socially adept. It taught me confidence, charisma and how to make friends.
+
+### **Education 2: Supplementary STEM coaching**
+
+My second education came from my supplementary STEM classes - preparation for the IIT-JEE exam that most young Indian students take to get into the IIT universities.
+
+This was my best classroom education - the class was very small (just 9 students), we went fast in class, and I asked many questions. It's the closest thing I have experienced to a personal tutor.
+
+I also thoroughly enjoyed learning physics - it felt like I was understanding the universe better. Math and Chemistry felt good because I was making progress in my IIT-JEE prep.
+
+I think the speed of the class content is what made this so engaging, I was never bored.
+
+### **Education 3: Self-directed learning through reading**
+
+My third education was entirely self-driven.
+
+I read only what I found interesting and what I believed would help me change the world. Through books, I learned about relationships, economics, AI, founders and their mistakes, critical thinking, cosmology, philosophy, and sales.
+
+This has been, by far, the highest-ROI education of my life. It compounded. It changed how I think. It has shaped who I am.
+
+The downsides were that many books were unnecessarily long, I left several incomplete or untouched. Secondly, it was quite haphazard - most were twitter/youtube recommendations I stumbled upon.
+
+I think its also important to note that most people find it difficult to find the time or create the systems to self-educate consistently.
+
+---
+
+**Again I want to emphasise**, the 3 educations I mentioned above are ones that less than 0.1% of students in India receive. If all students in India received them, the impact would fundamentally reshape India's trajectory. It would be one of the largest unhobblings of human capital the world has ever seen.
+
+---
+
+## **Part 2: The importance of education**
+
+I want to point out why I think education is so important.
+
+Right now, the people who dominate outcomes over decades are almost always obsessive learners. This includes the CEOs of almost every major company in the world - Elon, Charlie, Buffett, Bezos. This includes the best generals in history - Napoleon, Alexander, Caesar. 
+
+Several directly attribute their success to this. 
+
+Education has always been one of the leading indicators of success in the world.
+
+### **In the path to AGI**
+
+Even if AGI will render everyone useless, the path to AGI will entail many very important decisions. Smarter humans means better policy, better technology, more people focusing on risks before they become existential. It may help us get to the AI utopia more than most other things.
+
+### **Once we have AGI**
+
+AGI makes the loss of human agency much more likely. We may not be needed for most economically valuable tasks. It will be easy to drift into passively watching AI slop all the time. Universal basic income will exacerbate this.
+
+Education is likely the only real counterweight to maintain agency and autonomy.
+
+### **When we finally merge with AGI**
+
+Even if humans "merge" with AGI, it will not be a native extension of our cognition. It will look more like asking ChatGPT questions through our thoughts and receiving answers faster.
+
+It's the same analogy as why the calculator didn't make everyone as smart as Von Neumann or why Google did not make everyone a super genius immediately. We need to know what to ask.
+
+---
+
+## **Part 3: The ideal education I would have liked**
+
+What is the ideal education then? There are two core elements my education was missing.
+
+### **1. A breadth-first understanding of the world**
+
+I wanted exposure to a wide range of fields - and, more importantly, an understanding of their *boundaries*.
+
+I was forced to memorize details that had no leverage.
+
+All I really needed was a map of what's possible - so I could decide what I actually wanted to work on. And then I dive deeper on a need to know basis. Depth should come *after* direction, not before.
+
+This is the kind of interdisciplinary education Charlie Munger and Naval talk about.
+
+### **2. Real work, much earlier**
+
+I would have liked to start working on real projects much sooner - things I cared deeply about, poured energy into, and put out into the world.
+
+I visited Alphaschool (A new age school in SF that's getting all the buzz) and saw what this looks like in practice. One high school student built a TikTok musical that reached 30M views and now performs it live in NYC and Chicago. Another built an AI therapist embedded in soft toys. They voluntarily wanted to stay at school until 8 pm everyday, and finish their curriculum sooner just to work on these projects.
+
+These projects teach far more than exams ever could. This kind of education builds agency.
+
+---
+
+I'm building an AI tutor that gives this breadth-first, interdisciplinary, project-oriented education. If it works - because it's software - it could scale to every human unlike any school or university before.
+
+I've been building in this space for the past few months, and have already launched and tested two products in stealth, both aimed at adults.
+
+Now I'm focused on middle and high school students - people whose full-time job is to learn, and who still have the time and flexibility to shape how they think.
+
+I'm looking for collaborators. If you read this and feel an unusually strong pull toward it, please reach out at [akshaygiyer@gmail.com](mailto:akshaygiyer@gmail.com).
+
+---
+
+*Special thanks to Vikram Subbiah, Sophie Liu and Manas Bam for reviewing drafts of this blog!*`;
+
+    document.getElementById('content').innerHTML = marked.parse(markdown);
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('#navbarMenu');
+      if (burger && menu) {
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('is-active');
+          menu.classList.toggle('is-active');
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
