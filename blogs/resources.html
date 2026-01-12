@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Resources for Students</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A curated list of resources for students - YouTube channels, blogs, and tools to start building.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Resources for Students" />
+  <meta property="og:description" content="A curated list of resources for students - YouTube channels, blogs, and tools to start building." />
+  <meta property="og:image" content="https://akshayiyer.me/preview.jpg" />
+  <meta property="og:url" content="https://akshayiyer.me/blogs/resources" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Resources for Students" />
+  <meta name="twitter:description" content="A curated list of resources for students - YouTube channels, blogs, and tools to start building." />
+  <meta name="twitter:image" content="https://akshayiyer.me/preview.jpg" />
+  <link rel="icon" href="../favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.bundle.css">
+  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    .navbar-item:hover {
+      background-color: transparent !important;
+    }
+
+    .blog-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .blog-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-content p {
+      margin-bottom: 1.25rem;
+      line-height: 1.75;
+    }
+
+    .blog-content ol,
+    .blog-content ul {
+      margin-bottom: 1.25rem;
+      margin-left: 1.5rem;
+    }
+
+    .blog-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-content hr {
+      margin: 2rem 0;
+      background-color: #dbdbdb;
+    }
+
+    .back-link {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .blog-content {
+        font-size: 0.95rem;
+      }
+
+      .blog-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <strong>Akshay Iyer</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">Home</a>
+        <a class="navbar-item" href="index.html">Blogs</a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a href="https://github.com/akshay-022" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-github"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="mailto:akshaygiyer@gmail.com" class="icon is-large has-text-light">
+            <i class="fas fa-2x fa-envelope"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="https://www.linkedin.com/in/akshay-iyer2211/" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="https://x.com/AkshayIyer22" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-content">
+        <p class="back-link"><a href="index.html">&larr; Back to all posts</a></p>
+        <div id="content"></div>
+        <p class="back-link"><a href="index.html">&larr; Back to all posts</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const markdown = `# Resources for Students
+
+Jan 12, 2026
+
+A curated list of resources that I think are important for students to read, watch, and use.
+
+---
+
+## YouTube Channels
+
+### YCombinator
+
+The best startup advice on the internet. Watch talks from founders who've built billion-dollar companies.
+
+**Videos to get started:**
+- Coming soon
+
+### Alex Hormozi
+
+Practical business and sales advice. No fluff, just actionable content.
+
+**Videos to get started:**
+- Coming soon
+
+---
+
+## Blogs
+
+### Situational Awareness
+
+- Coming soon
+
+### Machines of Loving Grace
+
+- Coming soon
+
+---
+
+## Places to Start Building Websites
+
+### Antigravity (Student Version)
+
+- Coming soon
+
+### Cursor (Student Version)
+
+- Coming soon
+
+### Claude Code
+
+- Coming soon
+
+---
+
+*This page will be updated with more resources over time.*`;
+
+    document.getElementById('content').innerHTML = marked.parse(markdown);
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('#navbarMenu');
+      if (burger && menu) {
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('is-active');
+          menu.classList.toggle('is-active');
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
