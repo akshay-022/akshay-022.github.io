@@ -1,0 +1,422 @@
+/* Akshay Iyer — personal site. Editorial ink-on-paper, matches polymathsociety.us */
+
+:root {
+  --paper: #fbfaf7;
+  --ink: #141414;
+  --meta: #6b6b6b;
+  --rule: #e3e0d8;
+  --code-bg: #141414;
+  --code-ink: #fbfaf7;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", "Palatino", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ---------- nav ---------- */
+
+nav.site-nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 30px 0 0;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+nav.site-nav .brand {
+  font-weight: 600;
+  font-size: 19px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+nav.site-nav .links {
+  display: flex;
+  gap: 12px 22px;
+  flex-wrap: wrap;
+}
+
+nav.site-nav .links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav.site-nav .links a:hover,
+nav.site-nav .links a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- type ---------- */
+
+h1 {
+  font-size: clamp(38px, 7vw, 52px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  margin: 0 0 18px;
+}
+
+h2 {
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+p { margin: 0 0 16px; }
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: #b3ae9f;
+  text-underline-offset: 3px;
+}
+
+a:hover { text-decoration-color: var(--ink); }
+
+.kicker {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+.meta {
+  color: var(--meta);
+  font-size: 16px;
+}
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 56px 0;
+}
+
+section.block { margin: 64px 0; }
+
+header.hero { margin: 72px 0 0; }
+
+.lede { font-size: 22px; line-height: 1.55; }
+
+/* ---------- lists ---------- */
+
+ul.plain {
+  list-style: disc;
+  padding-left: 24px;
+}
+
+ul.plain li {
+  padding: 4px 0;
+}
+
+ol.numbered { padding-left: 22px; }
+ol.numbered li { margin-bottom: 12px; }
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 11px 24px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.btn:hover { background: #000; }
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 20px 0; }
+
+/* ---------- code ---------- */
+
+.codeblock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--code-bg);
+  color: var(--code-ink);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 22px 0;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 16px;
+}
+
+.codeblock button {
+  background: transparent;
+  color: var(--code-ink);
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.codeblock button:hover { border-color: var(--code-ink); }
+
+/* ---------- portrait ---------- */
+
+img.portrait {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 26px;
+}
+
+/* ---------- project entries ---------- */
+
+.entry {
+  padding: 26px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.entry:last-child { border-bottom: 1px solid var(--rule); }
+
+.entry .head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.entry .head .year {
+  color: var(--meta);
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.entry p { margin: 8px 0 0; }
+
+.entry .links { margin-top: 8px; font-size: 17px; }
+.entry .links a { margin-right: 18px; }
+
+.stat {
+  font-weight: 600;
+}
+
+/* ---------- thoughts / takes ---------- */
+
+details.take {
+  border-top: 1px solid var(--rule);
+}
+
+details.take:last-of-type { border-bottom: 1px solid var(--rule); }
+
+details.take summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 18px 0;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+details.take summary::-webkit-details-marker { display: none; }
+
+details.take summary::after {
+  content: "+";
+  font-weight: 400;
+  font-size: 26px;
+  color: var(--meta);
+  flex-shrink: 0;
+}
+
+details.take[open] summary::after { content: "\2212"; }
+
+details.take .body { padding: 0 0 22px; }
+
+details.take .body p:last-child { margin-bottom: 0; }
+
+.essay-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.essay-item:last-of-type { border-bottom: 1px solid var(--rule); }
+
+.essay-item a { font-size: 20px; font-weight: 500; }
+
+.essay-item .date { color: var(--meta); font-size: 16px; white-space: nowrap; }
+
+/* ---------- video ---------- */
+
+video.demo, iframe.demo {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--rule);
+  display: block;
+  margin: 22px 0;
+  background: #000;
+}
+
+iframe.embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  display: block;
+  margin: 18px 0 6px;
+  background: #000;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 18px 0 6px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 28px;
+  margin-top: 10px;
+}
+
+.project-cell h3 { margin-bottom: 6px; }
+
+.project-cell p { font-size: 17px; }
+
+.project-cell iframe.embed { margin: 12px 0 4px; }
+
+.project-cell .links { font-size: 16px; }
+.project-cell .links a { margin-right: 14px; }
+
+@media (max-width: 640px) {
+  .project-grid { grid-template-columns: 1fr; }
+}
+
+.video-grid iframe.embed { margin: 0; }
+
+.tweet-embed { margin: 18px 0 6px; }
+
+@media (max-width: 560px) {
+  .video-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- experience cards ---------- */
+
+.xp {
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.xp:last-child { border-bottom: 1px solid var(--rule); }
+
+.xp .xp-head {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.xp .xp-head img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 4px;
+}
+
+.xp .sub {
+  color: var(--meta);
+  font-size: 16px;
+}
+
+.xp ul {
+  padding-left: 22px;
+  margin: 10px 0 0;
+}
+
+.xp ul li { margin-bottom: 8px; }
+
+.coursework { font-style: italic; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tag {
+  border: 1px solid var(--rule);
+  background: #f2efe7;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* ---------- footer ---------- */
+
+footer.site-footer {
+  margin: 90px 0 48px;
+  padding-top: 26px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  font-size: 16px;
+  color: var(--meta);
+}
+
+footer.site-footer .social a {
+  margin-right: 18px;
+  color: var(--ink);
+}
+
+@media (max-width: 560px) {
+  body { font-size: 18px; }
+  header.hero { margin-top: 48px; }
+  .entry .head, .essay-item { flex-direction: column; gap: 2px; }
+}
