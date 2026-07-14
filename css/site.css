@@ -320,9 +320,16 @@ iframe.embed {
   margin-top: 10px;
 }
 
+.project-cell {
+  display: flex;
+  flex-direction: column;
+}
+
 .project-cell h3 { margin-bottom: 6px; }
 
 .project-cell p { font-size: 17px; }
+
+.project-cell p:last-of-type { flex-grow: 1; }
 
 .project-cell iframe.embed { margin: 12px 0 4px; }
 
