@@ -413,6 +413,32 @@ iframe.embed {
   font-size: 14px;
 }
 
+/* ---------- sub nav ---------- */
+
+nav.sub-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 26px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-size: 17px;
+}
+
+nav.sub-nav a {
+  color: var(--meta);
+  text-decoration: none;
+}
+
+nav.sub-nav a:hover { color: var(--ink); }
+
+nav.sub-nav a.active {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* ---------- blog posts ---------- */
 
 .post { margin: 56px 0 0; }
