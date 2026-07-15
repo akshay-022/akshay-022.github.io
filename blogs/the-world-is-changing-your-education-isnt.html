@@ -23,138 +23,43 @@
     content="I am offering to mentor you to think and act like the best startup founders in Silicon Valley." />
   <meta name="twitter:image" content="https://akshayiyer.me/preview.jpg" />
   <link rel="icon" href="../favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="../css/main.bundle.css">
-  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <style>
-    .navbar-item:hover {
-      background-color: transparent !important;
-    }
-
-    .blog-content {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .blog-content h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .blog-content h2 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .blog-content h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .blog-content p {
-      margin-bottom: 1.25rem;
-      line-height: 1.75;
-    }
-
-    .blog-content ol,
-    .blog-content ul {
-      margin-bottom: 1.25rem;
-      margin-left: 1.5rem;
-    }
-
-    .blog-content li {
-      margin-bottom: 0.5rem;
-    }
-
-    .blog-content hr {
-      margin: 2rem 0;
-      background-color: #dbdbdb;
-    }
-
-    .blog-content blockquote {
-      background-color: transparent !important;
-      border-left: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-
-    .blog-content blockquote ul,
-    .blog-content blockquote ol {
-      margin-left: 1.5rem !important;
-    }
-
-    .back-link {
-      margin-bottom: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .blog-content {
-        font-size: 0.95rem;
-      }
-
-      .blog-content h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="../index.html">
-        <strong>Akshay Iyer</strong>
-      </a>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div id="navbarMenu" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="../index.html">Home</a>
-        <a class="navbar-item" href="index.html">Blogs</a>
+    <nav class="site-nav">
+      <a class="brand" href="../index.html">Akshay Iyer</a>
+      <div class="links">
+        <a href="../polymath.html">Polymath</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../thoughts.html" class="active">Thoughts</a>
+        <a href="../books.html">Books</a>
+        <a href="../art.html">Art</a>
+        <a href="../music.html">My Music</a>
       </div>
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a href="https://github.com/akshay-022" class="icon is-large has-text-light">
-            <i class="fab fa-2x fa-github"></i>
-          </a>
-        </div>
-        <div class="navbar-item">
-          <a href="mailto:akshaygiyer@gmail.com" class="icon is-large has-text-light">
-            <i class="fas fa-2x fa-envelope"></i>
-          </a>
-        </div>
-        <div class="navbar-item">
-          <a href="https://www.linkedin.com/in/akshay-iyer2211/" class="icon is-large has-text-light">
-            <i class="fab fa-2x fa-linkedin-in"></i>
-          </a>
-        </div>
-        <div class="navbar-item">
-          <a href="https://x.com/AkshayIyer22" class="icon is-large has-text-light">
-            <i class="fab fa-2x fa-twitter"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
-  <section class="section">
-    <div class="container">
-      <div class="blog-content">
-        <p class="back-link"><a href="index.html">&larr; Back to all posts</a></p>
+  <div class="wrap">
+    <article class="post">
+        <p class="back-link"><a href="../thoughts.html">&larr; Back to all thoughts</a></p>
         <div id="content"></div>
-        <p class="back-link"><a href="index.html">&larr; Back to all posts</a></p>
+        <p class="back-link"><a href="../thoughts.html">&larr; Back to all thoughts</a></p>
+    </article>
+
+    <footer class="site-footer">
+      <div class="social">
+        <a href="https://github.com/akshay-022">GitHub</a>
+        <a href="https://x.com/AkshayIyer22">X</a>
+        <a href="https://www.linkedin.com/in/akshay-iyer2211/">LinkedIn</a>
+        <a href="mailto:akshaygiyer@gmail.com">Email</a>
       </div>
-    </div>
-  </section>
+      <div>Akshay Iyer, San Francisco</div>
+    </footer>
+  </div>
 
   <script>
     const markdown = `# **The World is Changing. Your Education Isn't.**
@@ -374,18 +279,6 @@ I am accepting a very small number of students for the first cohort. If you're i
     document.getElementById('content').innerHTML = marked.parse(markdown);
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const burger = document.querySelector('.navbar-burger');
-      const menu = document.querySelector('#navbarMenu');
-      if (burger && menu) {
-        burger.addEventListener('click', () => {
-          burger.classList.toggle('is-active');
-          menu.classList.toggle('is-active');
-        });
-      }
-    });
-  </script>
 </body>
 
 </html>

@@ -413,6 +413,60 @@ iframe.embed {
   font-size: 14px;
 }
 
+/* ---------- blog posts ---------- */
+
+.post { margin: 56px 0 0; }
+
+.post h1 {
+  font-size: clamp(32px, 5.5vw, 44px);
+  margin-bottom: 28px;
+}
+
+.post h2 {
+  font-size: 26px;
+  margin: 44px 0 12px;
+}
+
+.post h3 { margin: 32px 0 8px; }
+
+.post p, .post li { font-size: 19px; }
+
+.post ul, .post ol { padding-left: 24px; margin: 0 0 16px; }
+
+.post li { margin-bottom: 10px; }
+
+.post hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 40px 0;
+}
+
+.post blockquote {
+  border-left: 2px solid var(--rule);
+  padding-left: 18px;
+  margin: 0 0 16px;
+  color: var(--meta);
+}
+
+.post img { max-width: 100%; border-radius: 10px; }
+
+.post code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: #f2efe7;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.back-link { font-size: 17px; margin-bottom: 20px; }
+
+.acknowledgements {
+  color: var(--meta);
+  font-size: 17px;
+  font-style: italic;
+  margin-top: 40px;
+}
+
 /* ---------- footer ---------- */
 
 footer.site-footer {
