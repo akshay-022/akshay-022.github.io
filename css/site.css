@@ -201,25 +201,6 @@ ol.numbered li { margin-bottom: 12px; }
 
 .codeblock button:hover { border-color: var(--code-ink); }
 
-/* ---------- read more ---------- */
-
-.read-more {
-  border-top: 1px solid var(--rule);
-  padding-top: 30px;
-  margin-top: 56px;
-}
-
-.read-more a {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  text-decoration: none;
-  border-bottom: 2px solid var(--rule);
-  padding-bottom: 3px;
-}
-
-.read-more a:hover { border-bottom-color: var(--ink); }
-
 /* ---------- portrait ---------- */
 
 img.portrait {
