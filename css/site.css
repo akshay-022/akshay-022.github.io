@@ -331,10 +331,13 @@ iframe.embed {
   margin-top: 10px;
 }
 
+/* Title, description and media sit on shared row tracks so every card in a
+   row starts its embed at the same height. Links live inside .media so they
+   follow the embed itself rather than the tallest embed in the row. */
 .project-cell {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 4;
+  grid-row: span 3;
   align-content: start;
   padding-bottom: 52px;
 }
@@ -353,8 +356,8 @@ iframe.embed {
 .project-cell .media .twitter-tweet,
 .project-cell .media .twitter-tweet-rendered { margin-top: 0 !important; }
 
-.project-cell .links { font-size: 16px; }
-.project-cell .links a { margin-right: 14px; }
+.project-cell .media .links { font-size: 16px; margin-top: 6px; }
+.project-cell .media .links a { margin-right: 14px; }
 
 @supports not (grid-template-rows: subgrid) {
   .project-cell { display: block; }
