@@ -338,6 +338,11 @@ iframe.embed {
 
 .project-cell .media .tweet-embed { margin: 0 0 10px; }
 
+/* Twitter's widget injects its own 10px top margin, which knocks the tweet
+   out of line with the YouTube embed beside it. */
+.project-cell .media .twitter-tweet,
+.project-cell .media .twitter-tweet-rendered { margin-top: 0 !important; }
+
 .project-cell .links { font-size: 16px; }
 .project-cell .links a { margin-right: 14px; }
 
