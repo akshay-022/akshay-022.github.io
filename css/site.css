@@ -201,7 +201,36 @@ ol.numbered li { margin-bottom: 12px; }
 
 .codeblock button:hover { border-color: var(--code-ink); }
 
+/* ---------- photos ---------- */
+
+img.photo {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 0 30px;
+}
+
 /* ---------- portrait ---------- */
+
+/* A circular window onto a full photo: object-position puts the face in the
+   middle of the circle, scale zooms in a little past the whole scene. */
+.portrait-frame {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 48% 62%;
+  transform: scale(1.4);
+  display: block;
+}
 
 img.portrait {
   width: 92px;
