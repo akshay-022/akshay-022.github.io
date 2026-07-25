@@ -505,7 +505,11 @@ iframe.embed {
   border-radius: 4px;
 }
 
-.back-link { font-size: 17px; margin-bottom: 20px; }
+.back-link { font-size: 17px; margin: 0 0 20px; }
+
+.post > .back-link:first-child { margin-top: 88px; margin-bottom: 34px; }
+
+.post > .back-link:last-child { margin-top: 64px; margin-bottom: 0; }
 
 .acknowledgements {
   color: var(--meta);
