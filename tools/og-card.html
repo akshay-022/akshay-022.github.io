@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>OG card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fbfaf7;
+      --ink: #141414;
+      --rule: #d9d5cb;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { width: 1200px; height: 630px; }
+
+    body {
+      background: var(--paper);
+      font-family: Newsreader, Georgia, serif;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 78px 92px 84px;
+    }
+
+    /* the site's own kicker convention: small, uppercase, letterspaced */
+    .kicker {
+      font-size: 19px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+    }
+
+    .mark {
+      width: 56px;
+      height: 1px;
+      background: var(--rule);
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 82px;
+      line-height: 1.11;
+      letter-spacing: -0.015em;
+      max-width: 17ch;
+    }
+
+    /* step the title down so it never crowds the card */
+    body[data-len="long"] h1 { font-size: 68px; max-width: 19ch; }
+    body[data-len="xlong"] h1 { font-size: 57px; max-width: 22ch; }
+  </style>
+</head>
+
+<body>
+  <div class="kicker" id="kicker">Akshay Iyer</div>
+  <h1 id="title"></h1>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const title = params.get('title') || 'Untitled';
+    if (params.get('kicker')) document.getElementById('kicker').textContent = params.get('kicker');
+    document.getElementById('title').textContent = title;
+
+    document.body.dataset.len =
+      title.length > 58 ? 'xlong' : title.length > 36 ? 'long' : 'short';
+  </script>
+</body>
+
+</html>
