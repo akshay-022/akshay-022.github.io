@@ -482,6 +482,9 @@ iframe.embed {
 
 .post li { margin-bottom: 10px; }
 
+/* the closing line of a post gets room to land */
+.post #content > p:last-child { margin-top: 56px; }
+
 .post hr {
   border: none;
   border-top: 1px solid var(--rule);
