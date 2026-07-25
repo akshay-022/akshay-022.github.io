@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=7">
+  <link rel="stylesheet" href="css/site.css?v=8">
 </head>
 
 <body>
@@ -360,6 +360,18 @@
       </details>
     </section>
 
+    <section class="block">
+      <form class="subscribe">
+        <label for="sub-email">Get new posts by email.</label>
+        <div class="subscribe-row">
+        <input id="sub-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit">Subscribe</button>
+        </div>
+        <p class="subscribe-msg" role="status"></p>
+      </form>
+    </section>
+
     <footer class="site-footer">
       <div class="social">
         <a href="https://github.com/akshay-022">GitHub</a>
@@ -371,6 +383,7 @@
     </footer>
 
   </div>
+  <script src="js/subscribe.js"></script>
 </body>
 
 </html>

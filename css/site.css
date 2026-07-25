@@ -485,6 +485,83 @@ iframe.embed {
 /* the closing line of a post gets room to land */
 .post #content > p:last-child { margin-top: 56px; }
 
+/* ---- subscribe ---- */
+
+.subscribe {
+  border-top: 1px solid var(--rule);
+  margin-top: 64px;
+  padding-top: 28px;
+}
+
+.subscribe label {
+  display: block;
+  font-size: 17px;
+  color: var(--meta);
+  margin-bottom: 14px;
+}
+
+.subscribe-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subscribe-row[hidden] { display: none; }
+
+.subscribe input[name="email"] {
+  flex: 1 1 240px;
+  min-width: 0;
+  font-family: inherit;
+  font-size: 17px;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 10px 18px;
+}
+
+.subscribe input[name="email"]::placeholder { color: #a8a49a; }
+
+.subscribe input[name="email"]:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+
+/* honeypot: off-screen rather than display:none, which some bots skip */
+.subscribe input[name="website"] {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.subscribe button {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+.subscribe button:hover { background: #000; }
+
+.subscribe button:disabled { opacity: 0.55; cursor: default; }
+
+.subscribe-msg {
+  font-size: 16px;
+  color: var(--meta);
+  margin-top: 12px;
+}
+
+.subscribe-msg:empty { display: none; }
+
+.subscribe-msg.is-error { color: #9a3412; }
+
 .post hr {
   border: none;
   border-top: 1px solid var(--rule);
