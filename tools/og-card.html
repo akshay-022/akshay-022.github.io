@@ -24,23 +24,17 @@
       color: var(--ink);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      padding: 78px 92px 84px;
+      justify-content: flex-end;
+      padding: 0 92px 92px;
     }
 
-    /* the site's own kicker convention: small, uppercase, letterspaced */
+    /* name sits directly above the title as one block, but smaller than it
+       so the card reads as a title first and a byline second */
     .kicker {
-      font-size: 19px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.17em;
-    }
-
-    .mark {
-      width: 56px;
-      height: 1px;
-      background: var(--rule);
-      margin-bottom: 30px;
+      font-size: 38px;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin-bottom: 20px;
     }
 
     h1 {
