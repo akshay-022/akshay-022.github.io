@@ -146,7 +146,7 @@ ul.plain li {
   padding: 4px 0;
 }
 
-ol.numbered { padding-left: 22px; }
+ol.numbered { padding-left: 22px; margin-bottom: 20px; }
 ol.numbered li { margin-bottom: 12px; }
 
 /* ---------- buttons ---------- */
