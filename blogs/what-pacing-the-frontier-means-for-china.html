@@ -131,7 +131,7 @@ Dario's post has two kinds of agreements:
 1. Level 3 : Some kind of pacing agreement to reduce speed of progress.
 2. Level 4 : A full pacing, or a pause. Where we pace conservatively.
 
-### Reward equations
+## Reward Equations
 
 Let's model normalized rewards as :
 
@@ -154,7 +154,7 @@ Fixed assumptions:
 - If someone wins outright, the loser's system survives only if the winner holds back. China thinks the US would hold back 40% of the time. The US thinks China would 30% of the time. Otherwise each system survives 95%.
 - A cheater gets caught 10% of the time without verification, 90% with verification measures in the deal.
 
-Every cell below is one of these:
+Here are the reward EVs in different situations:
 
 | Outcome | Cell | R_US | R_China |
 | --- | --- | --- | --- |
@@ -170,7 +170,7 @@ Every cell below is one of these:
 
 TH and HT = catch rate × caught row + (1 − catch rate) × not-caught row.
 
-### Calculating Equilibrium
+## Calculating Equilibrium
 
 Let's treat this as a mixed-equilibrium problem to solve that has a formula. Let's call trust T and hedge H.
 
@@ -182,6 +182,10 @@ If either comes out below 0 or above 1, that side has a dominant move and the an
 
 ---
 
+Now let's run some of the cases.
+
+---
+
 ### Case 1: Pause, no verification
 
 Cheaters get caught 10% of the time. If caught, the other side sprints.
@@ -189,7 +193,7 @@ Cheaters get caught 10% of the time. If caught, the other side sprints.
 R_US: TT 0.557, TH 0.062, HT 0.542, HH 0.328<br>
 R_China: TT 0.485, TH 0.092, HT 0.533, HH 0.285
 
-China hedges no matter what. Because they can pace in secret, stay aligned, not get caught.
+China hedges no matter what. Because they can pace in secret, keep their AIs aligned, not get caught.
 
 | | China: Trust | China: Hedge |
 | --- | --- | --- |
@@ -285,6 +289,10 @@ The US should probably :
 2. Try to get a bigger lead without sabotaging China harmfully.
 
 This is all, only insofar as alignment can be done successfully with the current pacing that's being proposed. If it cannot then a pause treaty becomes the only way out and much more likely.
+
+---
+
+Also posted on [LessWrong](https://www.lesswrong.com/posts/aHcu8qAwA8aYd3RkW/what-pacing-the-frontier-means-for-china).
 `;
 
     document.getElementById('content').innerHTML = marked.parse(markdown);
