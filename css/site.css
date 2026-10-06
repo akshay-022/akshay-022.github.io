@@ -644,3 +644,22 @@ footer.site-footer .social a {
   header.hero { margin-top: 48px; }
   .entry .head, .essay-item { flex-direction: column; gap: 2px; }
 }
+
+/* social links in the top-right corner, above the page links */
+nav.site-nav .social-top {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+nav.site-nav .social-top a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: #b3ae9f;
+  text-underline-offset: 3px;
+}
+nav.site-nav .social-top a:hover { text-decoration-color: var(--ink); }
+nav.site-nav { padding-top: 18px; }
