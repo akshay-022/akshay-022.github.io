@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=10">
+  <link rel="stylesheet" href="css/site.css?v=11">
   <script>if(location.hostname==="akshay-022.github.io")location.replace("https://akshayiyer.me"+location.pathname+location.search+location.hash);</script>
 </head>
 
@@ -27,6 +27,20 @@
         <a href="books.html">Books</a>
         <a href="art.html" class="active">Art</a>
       </div>
+      <details class="nav-sub">
+        <summary>Subscribe</summary>
+        <div class="subscribe-pop">
+          <form class="subscribe">
+            <label for="sub-email">Get new posts by email.</label>
+            <div class="subscribe-row">
+              <input id="sub-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <button type="submit">Subscribe</button>
+            </div>
+            <p class="subscribe-msg" role="status"></p>
+          </form>
+        </div>
+      </details>
     </nav>
 
     <header class="hero">
@@ -226,6 +240,7 @@
     </footer>
 
   </div>
+  <script src="js/subscribe.js?v=2"></script>
 </body>
 
 </html>

@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/site.css?v=10">
+  <link rel="stylesheet" href="../css/site.css?v=11">
   <style>
     /* blank-line breaks between groups of paragraphs, as on LessWrong */
     .post #content .gap { margin-top: 32px; }
@@ -49,6 +49,20 @@
         <a href="../books.html">Books</a>
         <a href="../art.html">Art</a>
       </div>
+      <details class="nav-sub">
+        <summary>Subscribe</summary>
+        <div class="subscribe-pop">
+          <form class="subscribe">
+            <label for="sub-email">Get new posts by email.</label>
+            <div class="subscribe-row">
+              <input id="sub-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <button type="submit">Subscribe</button>
+            </div>
+            <p class="subscribe-msg" role="status"></p>
+          </form>
+        </div>
+      </details>
     </nav>
 
     <article class="post">
@@ -105,15 +119,6 @@
           <p>3. <strong>All AIs have some notion of morality like humans</strong> - The individual super-intelligent AIs take into account some values like fairness and morality from their users. This will make getting cooperation for unfair things like ganging up on minorities more difficult.</p>
           <p class="gap">This seems like an important topic to simulate/research for the post-AGI world. Science fiction greatly helps in imagining some of these situations, I recommend Iain Banks and the culture series (<a href="https://theculture.adactio.com/">https://theculture.adactio.com/</a>).</p>
         </div>
-        <form class="subscribe">
-          <label for="sub-email">Get new posts by email.</label>
-          <div class="subscribe-row">
-            <input id="sub-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
-            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button type="submit">Subscribe</button>
-          </div>
-          <p class="subscribe-msg" role="status"></p>
-        </form>
         <p class="back-link"><a href="../thoughts.html">&larr; Back to all thoughts</a></p>
     </article>
 
@@ -128,7 +133,7 @@
     </footer>
   </div>
 
-  <script src="../js/subscribe.js"></script>
+  <script src="../js/subscribe.js?v=2"></script>
 </body>
 
 </html>
