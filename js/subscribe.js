@@ -1,25 +1,3 @@
-// The top-right "Subscribe" pill is a <details> menu holding the form. Focus
-// the email field when it opens; close it on Escape or a click outside.
-document.querySelectorAll('details.nav-sub').forEach((menu) => {
-  menu.addEventListener('toggle', () => {
-    if (menu.open) menu.querySelector('input[name="email"]')?.focus();
-  });
-});
-
-document.addEventListener('click', (event) => {
-  document.querySelectorAll('details.nav-sub[open]').forEach((menu) => {
-    if (!menu.contains(event.target)) menu.open = false;
-  });
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key !== 'Escape') return;
-  document.querySelectorAll('details.nav-sub[open]').forEach((menu) => {
-    menu.open = false;
-    menu.querySelector('summary').focus();
-  });
-});
-
 // Progressive enhancement for the subscribe form. Without JS the form still
 // posts, it just does a full page navigation instead of staying put.
 document.addEventListener('submit', async (event) => {
