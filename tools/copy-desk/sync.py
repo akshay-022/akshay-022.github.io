@@ -34,7 +34,7 @@ def heading(text):
     return None, None
 
 
-def render(text, ind, sec_heading_tag, lede=False, titles=None):
+def render(text, ind, sec_heading_tag, lede=False, titles=None, old_blk=""):
     """Body markup for a hero/section from plain text."""
     out = []
     p_open = '<p class="lede">' if lede else "<p>"
@@ -48,7 +48,13 @@ def render(text, ind, sec_heading_tag, lede=False, titles=None):
             else:
                 out.append(" " * ind + f'<p class="kicker">{inline(c[3:])}</p>')
         elif c.startswith("### "):
-            out.append(" " * ind + f"<h3>{inline(c[4:])}</h3>")
+            h3 = re.search(r"<h3( [^>]*)?>", old_blk)
+            attrs = h3.group(1) if h3 and h3.group(1) else ""
+            out.append(" " * ind + f"<h3{attrs}>{inline(c[4:])}</h3>")
+        elif re.match(r"^\[image: (.+)\]$", c):
+            src = re.match(r"^\[image: (.+)\]$", c).group(1)
+            img = re.search(r'<img [^>]*src="' + re.escape(src) + r'"[^>]*>', old_blk)
+            out.append(" " * ind + (img.group(0) if img else f'<img src="{src}" alt="">'))
         elif re.match(r"^\[video: (.+)\]$", c):
             src = re.match(r"^\[video: (.+)\]$", c).group(1)
             title = (titles or {}).get(src, "Video")
@@ -134,7 +140,7 @@ for d in sorted(changed, key=lambda x: (x["pageOrder"], x["order"])):
             tag = "h2" if "<h2>" in old_blk else "kicker"
             titles = {a: b for a, b in re.findall(r'<iframe class="embed" src="([^"]+)" title="([^"]*)"', old_blk)}
             open_tag = re.match(r'    <section class="block"[^>]*>', old_blk).group(0)
-            new = open_tag + "\n" + render(d["text"], 6, tag, titles=titles) + "\n    </section>\n"
+            new = open_tag + "\n" + render(d["text"], 6, tag, titles=titles, old_blk=old_blk) + "\n    </section>\n"
             s = s[:m.start()] + new + s[m.end():]
             report.append(f"{d['id']}: section '{old_h}' rebuilt")
     pages[fname] = s
