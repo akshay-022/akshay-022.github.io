@@ -213,8 +213,7 @@ img.photo {
 
 /* ---------- portrait ---------- */
 
-/* A circular window onto a full photo: object-position puts the face in the
-   middle of the circle, scale zooms in a little past the whole scene. */
+/* A circular window onto a photo cropped square around the face. */
 .portrait-frame {
   width: 280px;
   height: 280px;
@@ -227,8 +226,7 @@ img.photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 48% 62%;
-  transform: scale(1.4);
+  object-position: 50% 50%;
   display: block;
 }
 
