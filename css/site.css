@@ -211,6 +211,28 @@ img.photo {
   margin: 0 0 30px;
 }
 
+/* Photos cropped to the same portrait shape, three to a row. A landscape photo
+   spans two columns, which keeps it the same height as the portraits. */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 8px 0 0;
+}
+
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.photo-grid img.wide {
+  grid-column: span 2;
+  aspect-ratio: 3 / 2;
+}
+
 /* ---------- portrait ---------- */
 
 /* A circular window onto a photo cropped square around the face. */
@@ -559,6 +581,161 @@ iframe.embed {
 .subscribe-msg:empty { display: none; }
 
 .subscribe-msg.is-error { color: #9a3412; }
+
+/* ---------- date me reach-out form ---------- */
+
+.reach-form { margin-top: 8px; }
+
+.reach-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.reach-fields[hidden] { display: none; }
+
+.reach-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.reach-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.reach-form .optional { color: var(--meta); }
+
+.reach-form input[type="text"],
+.reach-form input[type="email"],
+.reach-form textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 17px;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.reach-form textarea { resize: vertical; line-height: 1.5; }
+
+.reach-form input::placeholder { color: #a8a49a; }
+
+.reach-form input:focus,
+.reach-form textarea:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+
+.photo-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 17px;
+}
+
+.reach-form .dropzone {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 96px;
+  padding: 18px;
+  border: 1px dashed var(--meta);
+  border-radius: 10px;
+  color: var(--meta);
+  cursor: pointer;
+}
+
+.reach-form .dropzone[hidden] { display: none; }
+
+.reach-form .dropzone:hover,
+.reach-form .dropzone.is-over {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* The real file input covers the zone invisibly, so clicks and drops reach it. */
+.reach-form .dropzone input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.photo-previews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.photo-previews:empty { display: none; }
+
+.photo-note { font-size: 15px; color: var(--meta); }
+.photo-note:empty { display: none; }
+
+.photo-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.photo-preview img {
+  width: 96px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.reach-form .photo-preview button {
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--meta);
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* honeypot: off-screen rather than display:none, which some bots skip */
+.reach-form input[name="website"] {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.reach-form button[type="submit"] {
+  align-self: flex-start;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 10px 28px;
+  cursor: pointer;
+}
+
+.reach-form button[type="submit"]:hover { background: #000; }
+.reach-form button[type="submit"]:disabled { opacity: 0.55; cursor: default; }
+
+.reach-msg { font-size: 17px; color: var(--ink); margin: 14px 0 0; }
+.reach-msg:empty { display: none; }
+.reach-msg.is-error { color: #9a3412; }
 
 .post hr {
   border: none;
