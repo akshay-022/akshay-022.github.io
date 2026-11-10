@@ -5,7 +5,7 @@
 
 const TO = 'akshaygiyer@gmail.com';
 const FROM = 'Date me doc <dateme@akshayiyer.me>';
-const MAX_PHOTOS = 3;
+const MAX_PHOTOS = 5;
 const MAX_PHOTO_BYTES = 4 * 1024 * 1024;
 
 const json = (body, status = 200) =>

@@ -1,7 +1,7 @@
 // The reach-out form on /dateme. Photos can be dropped or picked, show as
 // thumbnails, and are shrunk in the browser before upload so a few phone photos
 // stay well under the server's size limit.
-const MAX_PHOTOS = 3;
+const MAX_PHOTOS = 5;
 const MAX_EDGE = 1600;
 
 const form = document.querySelector('.reach-form');
