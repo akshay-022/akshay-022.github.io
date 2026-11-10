@@ -689,10 +689,11 @@ iframe.embed {
   gap: 4px;
 }
 
+/* Previews show the whole photo, uncropped, at a fixed height. */
 .photo-preview img {
-  width: 96px;
   height: 128px;
-  object-fit: cover;
+  width: auto;
+  max-width: 220px;
   border-radius: 8px;
   display: block;
 }
